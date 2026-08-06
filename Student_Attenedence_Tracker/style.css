@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  padding: 20px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 120px;
+  padding: 10px;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#generateBtn {
+  background: #2563eb;
+}
+
+#allPresentBtn {
+  background: #16a34a;
+}
+
+#allAbsentBtn {
+  background: #dc2626;
+}
+
+#resetBtn {
+  background: #f59e0b;
+}
+
+#saveBtn {
+  background: #7c3aed;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+#attendanceTable {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background: #1e293b;
+  color: white;
+  padding: 12px;
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tr.active {
+  background: #dbeafe;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.pending {
+  color: #64748b;
+}
+
+.present {
+  color: #16a34a;
+}
+
+.absent {
+  color: #dc2626;
+}
+
+.presentBtn {
+  background: #16a34a;
+  margin-right: 8px;
+}
+
+.absentBtn {
+  background: #dc2626;
+}
+
+#summaryBox {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  display: none;
+}
+
+#summaryBox h2 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+#summaryBox h3 {
+  margin-top: 15px;
+  color: #334155;
+}
+
+#summaryBox p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+#downloadBtn {
+  background: #0f766e;
+  margin-top: 20px;
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .input-section,
+  .button-section {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}

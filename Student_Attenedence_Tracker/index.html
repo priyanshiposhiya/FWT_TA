@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Attendance Tracker</h1>
+        <div class="input-section"> 
+            <label> Start Roll No: </label> 
+            <input type="number" id="startRoll" /> 
+            <label> End Roll No: </label> 
+            <input type="number" id="endRoll" /> 
+            <button id="generateBtn" onclick="generateTable()">Generate</button> 
+        </div>
+        <div class="button-section"> 
+            <button id="allPresentBtn" onclick="allPresent()">All Present</button> 
+            <button id="allAbsentBtn" onclick="allAbsent()">All Absent</button> 
+            <button id="resetBtn" onclick="resetAttendance()"> Reset Attendance </button> 
+            <button id="saveBtn" onclick="saveAttendance()">Save Attendance</button> </div>
+
+        <div id="summaryBox">
+            <h2>Attendance Summary</h2>
+            <p> Total Student : <span id="totalStudent"> 0 </span> </p>
+            <p> Total Present : <span id="totalPresent"> 0 </span> </p>
+            <p> Total Absent : <span id="totalAbsent"> 0 </span> </p>
+            <h3>Present List</h3>
+            <p id="presentList"></p>
+            <h3>Absent List</h3>
+            <p id="absentList"></p> <button id="downloadBtn" onclick="download()">Download Absent List</button>
+        </div>
+        
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
