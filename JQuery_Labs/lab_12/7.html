@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background of Children Div</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+            .children{
+                background-color: red;
+                height: 200px;
+                width: 200px;
+                float: left;
+                margin: 20px;
+            }
+
+            button{
+                padding: 10px 20px;
+                border: none;
+                background-color: #007bff;
+                color: white;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+</head>
+
+<body>
+    <button id="btn">Change</button>
+    <div id="myDiv">
+        <div class="children"></div>
+        <div class="children"></div>
+        <div class="children"></div>
+        <div class="children"></div>
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('#myDiv').children('div').css({backgroundColor:"blue"})
+            })
+        })
+        
+    </script>
+</body>
+
+</html>

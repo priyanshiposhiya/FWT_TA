@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Effects</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            background-color: #e3f2fd;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        
+        </style>
+</head>
+
+<body>
+    <h1 id="myEle">
+        Hello World!!!!
+    </h1>
+    <button id="btn1">Fade In</button>
+    <button id="btn2">Fade Out</button>
+    <button id="btn3">Fade Toggle</button>
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                $('#myEle').fadeIn(1000)
+            })
+        })
+        $(document).ready(function () {
+            $('#btn2').click(function () {
+                $('#myEle').fadeOut(1000)
+            })
+        })
+        $(document).ready(function () {
+            $('#btn3').click(function () {
+                $('#myEle').fadeToggle(1000)
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Number Validation</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        .login-container{
+            width: 350px;
+            margin: 80px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .message{
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h2>Enrollment Validation</h2>
+
+        <input type="text" id="enroll" placeholder="Enter Enrollment No.">
+
+        <p class="message" id="message"></p>
+
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+
+            const pattern = /^[0-9]{11}$/;
+
+            $('#enroll').blur(function () {
+
+                const enroll = $('#enroll').val();
+
+                if(pattern.test(enroll)){
+
+                    $('#message')
+                    .text("Valid Enrollment Number")
+                    .css({color : "green"});
+
+                }
+                else{
+
+                    $('#message')
+                    .text("Invalid Enrollment Number")
+                    .css({color : "red"});
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

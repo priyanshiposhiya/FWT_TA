@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Effects</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 50px;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        </style>
+</head>
+
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7prLiXug0dKBPSCVqXatHbvhKsKUG1a53nw&s"
+        alt="not found">
+    <br>
+    <button id="btn1">Slide Up</button>
+    <button id="btn2">Slide Down</button>
+    <button id="btn3">Slide Toggle</button>
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                $('img').slideUp(1000)
+            })
+        })
+        $(document).ready(function () {
+            $('#btn2').click(function () {
+                $('img').slideDown(1000)
+            })
+        })
+        $(document).ready(function () {
+            $('#btn3').click(function () {
+                $('img').slideToggle(1000)
+            })
+        })
+    </script>
+</body>
+
+</html>

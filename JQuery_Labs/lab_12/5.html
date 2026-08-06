@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items in List</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            width: 350px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2{
+            margin-bottom: 20px;
+        }
+
+        button{
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #388E3C;
+        }
+
+        ul{
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        li{
+            padding: 10px;
+            /* This will ensure the bullet points are inside the list item */   
+            list-style-position: inside;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Add List Items</h2>
+
+        <button id="btn">Add</button>
+
+        <ul>
+            <li>Hello World</li>
+        </ul>
+
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#btn').click(function () {
+
+                $('ul').append('<li>Hello World</li>');
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

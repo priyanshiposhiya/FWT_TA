@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Siblings</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        #div1{
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+        }
+        h1, h2, p, span{
+            background-color: #e3f2fd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        </style>
+</head>
+
+<body>
+    <button id="btn">Hide</button>
+    <div id="div1">
+        <h1 id="item1">Hello World</h1>
+        <p id="item2">Darshan University</p>
+        <span id="item3">Rajkot</span>
+        <div id="item4">
+            <h2 id="item5">Computer Engneering</h2>
+            <span id="item6">Poshiya Priyanshi</span>
+        </div>
+        <p id="item7">Web Technology</p>
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('#item3').siblings().hide()
+            })
+        })
+        
+    </script>
+</body>
+
+</html>

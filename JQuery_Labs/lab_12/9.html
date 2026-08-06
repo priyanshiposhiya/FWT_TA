@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Element with ID</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f4f4f4;
+        }
+
+        #myEle{
+            width: 300px;
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: white;
+            border: 2px solid purple;
+            margin-bottom: 20px;
+            color: purple;
+        }
+
+        button{
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: purple;
+            color: white;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="myEle">
+        Hello World!!!!
+    </div>
+
+    <button id="btn">Click</button>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('#btn').click(function(){
+
+                $('#myEle').hide();
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

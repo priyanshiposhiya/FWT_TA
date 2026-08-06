@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Background Change</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <p id="myEle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam molestias impedit earum doloribus eveniet? Cupiditate quas ipsum debitis, exercitationem eligendi culpa ex eos corrupti maxime sed consequatur explicabo nisi voluptas!</p>
+    <p id="myEle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam molestias impedit earum doloribus eveniet? Cupiditate quas ipsum debitis, exercitationem eligendi culpa ex eos corrupti maxime sed consequatur explicabo nisi voluptas!</p>
+    <p id="myEle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam molestias impedit earum doloribus eveniet? Cupiditate quas ipsum debitis, exercitationem eligendi culpa ex eos corrupti maxime sed consequatur explicabo nisi voluptas!</p>
+    <p id="myEle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam molestias impedit earum doloribus eveniet? Cupiditate quas ipsum debitis, exercitationem eligendi culpa ex eos corrupti maxime sed consequatur explicabo nisi voluptas!</p>
+     <script>
+        $(document).ready(function(){
+            $('p').mouseenter(function(){
+                $('p').css({backgroundColor:"red"})
+            })
+            $('p').mouseout(function(){
+                $('p').css({backgroundColor:"white"})
+            })
+        })
+     </script>
+</body>
+</html>
