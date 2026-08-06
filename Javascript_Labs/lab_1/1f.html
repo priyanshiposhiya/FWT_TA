@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duration Animation</title>
+<style>
+
+div{
+    width:100px;
+    height:100px;
+    background:red;
+    position:relative;
+
+    animation-name:speed;
+    animation-duration:5s;
+
+    /* animation-timing-function:linear; */
+    /* animation-timing-function:ease; */
+    /* animation-timing-function:ease-in; */
+    /* animation-timing-function:ease-out; */
+    /* animation-timing-function:ease-in-out;  */
+}
+
+@keyframes speed{
+
+    from{
+        left:0px;
+    }
+
+    to{
+        left:400px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+
+    <script>
+
+        num1 = parseInt(prompt("Enter first number:"));
+        num2 = parseInt(prompt("Enter second number:"));
+
+        operator = prompt("Enter operation + , - , * , / ");
+
+        if (operator == "+") {
+            document.write("Addition is : ", +(num1 + num2))
+                ;
+        }
+        else if (operator == "-") {
+            document.write("Subtraction is : ", num1 - num2)
+                ;
+        }
+        else if (operator == "*") {
+            document.write("Multiplication is : ", num1 * num2)
+                ;
+        }
+        else if (operator == "/") {
+            document.write("Division is : ", num1 / num2)
+        }
+        else {
+            alert("Invalid Operation");
+        }
+
+    </script>
+
+</body>
+
+</html>

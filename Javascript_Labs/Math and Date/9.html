@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password</title>
+</head>
+
+<body>
+
+    <script>
+
+        let len = parseInt(prompt("Enter Length"));
+
+        let pass = "";
+
+        for (let i = 0; i < len; i++) {
+            pass += Math.floor(Math.random() * 10);
+        }
+
+        document.write("Password : "+pass);
+
+    </script>
+
+</body>
+
+</html>

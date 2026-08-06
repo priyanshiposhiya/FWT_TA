@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fibonacci Series</title>
+</head>
+
+<body>
+
+    <script>
+
+        num = parseInt(prompt("Enter number of terms:"));
+
+        a = 0;
+        b = 1;
+
+        series = a + " " + b;
+
+        while (a <= num) {
+            c = a + b;
+            series = series + " " + c;
+
+            a = b;
+            b = c;
+        }
+
+        document.write("Fibonacci Series : " + series);
+
+    </script>
+
+</body>
+
+</html>

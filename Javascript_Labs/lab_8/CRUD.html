@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+</head>
+<style>
+    table {
+        width: 100%;
+        text-align: center;
+        font-size: larger;
+        margin-top: 20px;
+    }
+
+    div {
+        margin: 10px;
+        text-align: center;
+    }
+
+    input {
+        width: 340px;
+        height: 52px;
+        padding: 0 18px;
+        border: 2px solid #dbe3ec;
+        outline: none;
+        border-radius: 12px;
+        font-size: 16px;
+        background: white;
+        color: #1e293b;
+    }
+
+    input:focus {
+        border-color: #2563eb;
+    }
+</style>
+
+<body>
+    <h1 class="text-center p-4">CRUD Operations for Students</h1>
+    <div>
+        <input type="text" id="username">
+        <button onclick="addStudent()" id="editAddBtn" class="btn btn-primary">ADD</button>
+        <button onclick="updateStudent()" id="editAddBtn" class="btn btn-primary">UPDATE</button>
+    </div>
+
+    <table border="1" class="table table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </thead>
+        <tbody id="tablebody">
+
+        </tbody>
+    </table>
+
+    <script>
+        arr = []
+        editIndex = -1
+        function Display() {
+            temp = ""
+            for (i = 0; i < arr.length; i++) {
+                temp += `<tr>
+                <td>${i + 1}</td>
+                <td>${arr[i]}</td>
+                <td>
+                    <button onclick="editName(${i})" class="btn btn-success" >EDIT</button>
+                    <button onclick="deleteStudent(${i})" class="btn btn-danger" >DELETE</button>
+                </td> 
+            </tr>`
+            }
+            document.getElementById("tablebody").innerHTML = temp;
+        }
+
+        function addStudent() {
+            name = document.getElementById("username").value
+
+            if (name == "") {
+                alert("Please enter a name")
+            }
+            else {
+                arr.push(name)
+            }
+
+            Display()
+            document.getElementById("username").value = ""
+        }
+
+        function deleteStudent(index) {
+            arr.splice(index, 1)
+            Display()
+        }
+
+        function editName(index) {
+            editIndex = index
+            document.getElementById("username").value = arr[index]
+        }
+
+        function updateStudent() {
+            if(editIndex == -1){
+                alert("Please click on edit button to update the name")
+            }
+            else  {
+                name = document.getElementById("username").value
+                arr[editIndex] = name
+                editIndex = -1
+                Display()
+                document.getElementById("username").value = ""
+            }
+        }
+
+        // function editName(index){
+        //    editname = prompt("Enter new name")
+        //    arr[index] = editname
+        //    Display()
+        // }
+    </script>
+</body>
+
+</html>

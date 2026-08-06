@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Height of Building</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+        =========================================
+            Height of Building using Math Object
+        =========================================
+        
+        Theory:
+        1. This program calculates the height of a building
+           using trigonometry.
+        
+        2. Formula:
+              Height = Distance × tan(Angle)
+        
+        3. Math.tan() accepts the angle in radians,
+           so convert degrees to radians.
+        
+        4. Radians = Degrees × (Math.PI / 180)
+        
+        */
+
+        // Take input from user
+        let distance = parseInt(prompt("Enter distance from the building (in meters):"));
+
+        let angle = parseInt(prompt("Enter angle of elevation (in degrees):"));
+
+        // Convert degrees to radians
+        let radians = angle * (Math.PI / 180);
+
+        // Calculate height
+        let height = distance * Math.tan(radians);
+
+        // Display output
+        document.write("Distance = " + distance + " meters <br>");
+        document.write("Angle = " + angle + "° <br>");
+        document.write("Height of Building = " + height.toFixed(2) + " meters");
+
+    </script>
+
+</body>
+
+</html>

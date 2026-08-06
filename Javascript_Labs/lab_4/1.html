@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factors of Number</title>
+</head>
+
+<body>
+
+    <script>
+
+        num = parseInt(prompt("Enter a number:"));
+        factors = "";
+
+        for (i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                factors = factors + i + " ";
+            }
+        }
+
+        document.write("Factors are : " + factors);
+
+    </script>
+
+</body>
+
+</html>

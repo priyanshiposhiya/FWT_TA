@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Digital Clock</title>
+</head>
+
+<body>
+
+    <h2>Live Digital Clock</h2>
+
+    <p id="clock"></p>
+
+    <script>
+
+        /*
+        =========================================
+             Live Digital Clock
+        =========================================
+        
+        Theory:
+        
+        1. The Date object is used to get the current
+           date and time.
+        
+        2. getHours() returns the current hour.
+        
+        3. getMinutes() returns the current minutes.
+        
+        4. getSeconds() returns the current seconds.
+        
+        5. setInterval() repeatedly calls a function
+           after a specified time interval.
+        
+        6. Here, setInterval() updates the clock
+           every 1000 milliseconds (1 second).
+        */
+
+        // Function to display current time
+        function showClock() {
+            let now = new Date();
+
+            let hour = now.getHours();
+            let minute = now.getMinutes();
+            let second = now.getSeconds();
+
+            // Add leading zero if needed
+            if (hour < 10)
+                hour = "0" + hour;
+
+            if (minute < 10)
+                minute = "0" + minute;
+
+            if (second < 10)
+                second = "0" + second;
+
+            document.getElementById("clock").innerHTML =
+                hour + ":" + minute + ":" + second;
+        }
+
+        // Display clock immediately
+        showClock();
+
+        // Update every second
+        setInterval(showClock, 1000);
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Current Time</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+        =========================================
+              Current Time using Date Object
+        =========================================
+        
+        Theory:
+        1. new Date() gets the current date and time.
+        2. toLocaleTimeString() returns the current time.
+        */
+
+        let time = new Date();
+
+        document.write("Current Time = " + time.toLocaleTimeString());
+
+    </script>
+
+</body>
+
+</html> -->

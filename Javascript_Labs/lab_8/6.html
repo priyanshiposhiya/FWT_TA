@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #764ba2, white);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .login-container {
+            width: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 40px rgba(44, 44, 150, 0.18);
+            color: #222;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4a3fa3;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #4a3fa3;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1.5px solid #bdbdfc;
+            border-radius: 7px;
+            background: #f7f7fb;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border: 1.5px solid #764ba2;
+            outline: none;
+            box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-top: -10px;
+            margin-bottom: 12px;
+            min-height: 18px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #764ba2, #667eea);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h2>User Registration Form</h2>
+
+        <form id="formA">
+
+            <!-- USERNAME -->
+            <label>Username :</label>
+            <input type="text" id="username">
+            <div class="error" id="error1"></div>
+
+            <!-- PASSWORD -->
+            <label>Password :</label>
+            <input type="password" id="password">
+            <div class="error" id="error2"></div>
+
+            <!-- REPEAT PASSWORD -->
+            <label>Repeat Password :</label>
+            <input type="password" id="repeatpassword">
+            <div class="error" id="error3"></div>
+
+            <!-- DOB -->
+            <label>Date of Birth :</label>
+            <input type="date" id="dob">
+            <div class="error" id="error4"></div>
+
+            <!-- ENROLLMENT -->
+            <label>Enrollment No. :</label>
+            <input type="text" id="enrollment">
+            <div class="error" id="error5"></div>
+
+            <!-- EMAIL -->
+            <label>Email :</label>
+            <input type="text" id="email">
+            <div class="error" id="error6"></div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+    <script>
+
+        // USERNAME VALIDATION
+
+        const userName = document.getElementById("username");
+        const error1 = document.getElementById("error1");
+
+        userName.addEventListener("blur", () => {
+
+            if (userName.value.trim() === "") {
+
+                error1.innerHTML = "Username is required";
+                userName.style.border = "1px solid red";
+
+            }
+
+            else if (userName.value.length < 8) {
+
+                error1.innerHTML = "Username must be at least 8 characters";
+                userName.style.border = "1px solid red";
+
+            }
+
+            else {
+
+                error1.innerHTML = "";
+                userName.style.border = "1px solid green";
+
+            }
+
+        });
+
+
+        // PASSWORD VALIDATION
+
+        const passwordInput = document.getElementById("password");
+        const error2 = document.getElementById("error2");
+
+        passwordInput.addEventListener("blur", () => {
+
+            const password = passwordInput.value.trim();
+
+            if (password === "") {
+
+                error2.innerHTML = "Password is required";
+                passwordInput.style.border = "1px solid red";
+
+            }
+
+            else if (password.length < 8 || password.length > 12) {
+
+                error2.innerHTML = "Password must be 8-12 characters";
+                passwordInput.style.border = "1px solid red";
+
+            }
+
+            else {
+
+                error2.innerHTML = "";
+                passwordInput.style.border = "1px solid green";
+
+            }
+
+        });
+
+
+        // REPEAT PASSWORD VALIDATION
+
+        const repeatPasswordInput = document.getElementById("repeatpassword");
+        const error3 = document.getElementById("error3");
+
+        repeatPasswordInput.addEventListener("blur", () => {
+
+            const password = passwordInput.value.trim();
+            const repeatPassword = repeatPasswordInput.value.trim();
+
+            if (repeatPassword === "") {
+
+                error3.innerHTML = "Please enter repeat password";
+                repeatPasswordInput.style.border = "1px solid red";
+
+            }
+
+            else if (password !== repeatPassword) {
+
+                error3.innerHTML = "Passwords do not match";
+                repeatPasswordInput.style.border = "1px solid red";
+
+            }
+
+            else {
+
+                error3.innerHTML = "";
+                repeatPasswordInput.style.border = "1px solid green";
+
+            }
+
+        });
+
+
+        // DATE OF BIRTH VALIDATION
+
+        const dob = document.getElementById("dob");
+        const error4 = document.getElementById("error4");
+
+        dob.addEventListener("blur", () => {
+
+            if (!dob.value) {
+
+                error4.innerHTML = "Please enter your birth date";
+                dob.style.border = "1px solid red";
+
+            }
+
+            else {
+
+                error4.innerHTML = "";
+                dob.style.border = "1px solid green";
+
+            }
+
+        });
+
+
+        // ENROLLMENT VALIDATION
+
+        const enrollment = document.getElementById("enrollment");
+        const error5 = document.getElementById("error5");
+
+        enrollment.addEventListener("blur", () => {
+
+            if (enrollment.value.trim() === "") {
+
+                error5.innerHTML = "Please enter enrollment number";
+                enrollment.style.border = "1px solid red";
+
+            }
+
+            else if (enrollment.value.length != 11) {
+
+                error5.innerHTML = "Enrollment number must be 11 digits";
+                enrollment.style.border = "1px solid red";
+
+            }
+
+            else {
+
+                error5.innerHTML = "";
+                enrollment.style.border = "1px solid green";
+
+            }
+
+        });
+
+
+        // EMAIL VALIDATION
+
+        const email = document.getElementById("email");
+        const error6 = document.getElementById("error6");
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        email.addEventListener("blur", () => {
+
+            if (email.value.trim() === "") {
+
+                error6.innerHTML = "Please enter email";
+                email.style.border = "1px solid red";
+
+            }
+
+            else if (!emailPattern.test(email.value)) {
+
+                error6.innerHTML = "Invalid email";
+                email.style.border = "1px solid red";
+
+            }
+
+            else {
+
+                error6.innerHTML = "";
+                email.style.border = "1px solid green";
+
+            }
+
+        });
+
+
+        // FORM SUBMIT VALIDATION
+
+        document.getElementById("formA").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            if (
+
+                userName.value.trim() !== "" &&
+                userName.value.length >= 8 &&
+
+                passwordInput.value.trim() !== "" &&
+                passwordInput.value.length >= 8 &&
+                passwordInput.value.length <= 12 &&
+
+                repeatPasswordInput.value.trim() !== "" &&
+                passwordInput.value === repeatPasswordInput.value &&
+
+                dob.value !== "" &&
+
+                enrollment.value.trim() !== "" &&
+                enrollment.value.length == 11 &&
+
+                email.value.trim() !== "" &&
+                emailPattern.test(email.value)
+
+            ) {
+
+                alert("Form Submitted Successfully ✅");
+
+                document.getElementById("formA").reset();
+
+                // reset border colors back to default purple
+                userName.style.border = "1.5px solid #bdbdfc";
+                passwordInput.style.border = "1.5px solid #bdbdfc";
+                repeatPasswordInput.style.border = "1.5px solid #bdbdfc";
+                dob.style.border = "1.5px solid #bdbdfc";
+                enrollment.style.border = "1.5px solid #bdbdfc";
+                email.style.border = "1.5px solid #bdbdfc";
+
+            }
+
+            else {
+
+                alert("Please fill all fields correctly ❌");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

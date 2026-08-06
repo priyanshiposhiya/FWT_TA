@@ -1,0 +1,113 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Form Events</title>
+
+    <style>
+        body{
+            text-align: center;
+            margin-top: 80px;
+            font-family: Arial;
+        }
+
+        input{
+            padding: 10px;
+            width: 250px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="result">Form Events</h2>
+
+    <form onsubmit="show('Form Submitted')">
+
+        <input type="text"
+            placeholder="Focus Here"
+            onfocus="show('Input Focused')"
+            onblur="show('Input Lost Focus')"
+            onchange="show('Value Changed')">
+
+        <br>
+
+        <input type="submit">
+
+    </form>
+
+    <script>
+
+        function show(message){
+            document.getElementById("result").innerHTML = message;
+        }
+
+    </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Events using addEventListener</title>
+
+    <style>
+        body{
+            text-align: center;
+            margin-top: 80px;
+            font-family: Arial;
+        }
+
+        input{
+            padding: 10px;
+            width: 250px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="result">Form Events</h2>
+
+    <form id="myForm">
+
+        <input type="text"
+            id="textbox"
+            placeholder="Focus Here">
+
+        <br>
+
+        <input type="submit">
+
+    </form>
+
+    <script>
+
+        let form = document.getElementById("myForm");
+        let inputBox = document.getElementById("textbox");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            show("Form Submitted");
+        });
+
+        inputBox.addEventListener("focus", function () {
+            show("Input Focused");
+        });
+
+        inputBox.addEventListener("blur", function () {
+            show("Input Lost Focus");
+        });
+
+        inputBox.addEventListener("change", function () {
+            show("Value Changed");
+        });
+
+        function show(message){
+            document.getElementById("result").innerHTML = message;
+        }
+
+    </script>
+
+</body>
+</html>

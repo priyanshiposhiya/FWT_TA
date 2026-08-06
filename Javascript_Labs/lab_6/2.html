@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+</head>
+
+<body>
+    <script>
+        a = [1, 8, 7, 3, 9, 2, 4, 6]
+        a.push(10);
+        document.write("Array after push method : " + a);
+        document.write("</br>")
+        a.unshift(6);
+        document.write("Array after unshift method : " + a);
+        document.write("</br>")
+        a.pop();
+        document.write("Array after pop method : " + a);
+        document.write("</br>")
+        a.shift();
+        document.write("Array after shift method : " + a);
+        document.write("</br>")
+        a.splice(2, 5);
+        document.write("Array after splice method : " + a);
+        document.write("</br>")
+        slice = a.slice(2, 5);
+        document.write("Array after slice method : " + slice);
+        document.write("</br>")
+        sort = a.sort();
+        document.write("Array after sort method : " + a);
+    </script>
+</body>
+
+</html>

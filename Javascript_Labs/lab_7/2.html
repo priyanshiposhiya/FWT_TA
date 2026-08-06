@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #f4f7fb;
+        }
+
+        .login-container {
+            width: 380px;
+            background: white;
+
+            padding: 40px 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            border: 1px solid #e5e7eb;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+
+            color: #111827;
+
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .input-group {
+            margin-bottom: 22px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+
+            color: #374151;
+
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px 15px;
+
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+
+            outline: none;
+
+            font-size: 15px;
+
+            background: #f9fafb;
+
+            transition: 0.3s;
+        }
+
+        input::placeholder {
+            color: #9ca3af;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+
+            background: white;
+
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+
+            border: none;
+            border-radius: 12px;
+
+            background: #2563eb;
+            color: white;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .message {
+            color: red;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        @media(max-width: 420px) {
+
+            .login-container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+
+            .login-container h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h2>Login</h2>
+
+        <div class="input-group">
+            <label for="username">Username</label>
+
+            <input type="text" id="username" placeholder="Enter username">
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password</label>
+
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+
+        <!-- <p class="message" id="message"></p> -->
+
+        <button id="btn" onClick="login()">
+            Login
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function login() {
+
+            userRef = document.getElementById("username").value
+            passRef = document.getElementById("password").value
+
+            if (userRef == "admin" && passRef == "1234") {
+
+                // document.getElementById("message").style.color="green";
+                // document.getElementById("message").innerText="Login Successfull";
+
+                alert("Login Successfull");
+            }
+            else {
+
+                // document.getElementById("message").style.color="red";
+                // document.getElementById("message").innerText="Invalid username or password";
+
+                alert("Invalid username or password")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Array</title>
+</head>
+
+<body>
+    <script>
+        n = parseInt(prompt("Enter the size of array : "));
+
+        a = [];
+
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Enter the " + (i + 1) + " element : "));
+        }
+
+        for (i = 0; i < n; i++) {
+            for (j = (i + 1); j < n; j++) {
+                if (a[i] > a[j]) {
+                    temp = a[i]
+                    a[i] = a[j]
+                    a[j] = temp
+                }
+            }
+
+        }
+
+        document.write("Sorted array is : " + a);
+
+    </script>
+</body>
+
+</html>

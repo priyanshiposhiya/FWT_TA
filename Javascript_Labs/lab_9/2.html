@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>var let const Demo</title>
+</head>
+<body>
+
+    <h1>Difference Between var, let and const</h1>
+
+    <script>
+
+        // var
+        var a = 10;
+        var a = 20; // redeclaration allowed
+
+        console.log("var value =", a);
+
+        // let
+        let b = 30;
+        b = 40; // value can change
+
+        console.log("let value =", b);
+
+        // const
+        const c = 50;
+
+        console.log("const value =", c);
+
+        // Block Scope Demo
+        {
+            var x = 100;
+            let y = 200;
+            const z = 300;
+
+            console.log("Inside Block");
+            console.log(x);
+            console.log(y);
+            console.log(z);
+        }
+
+        console.log("Outside Block");
+        console.log(x); // works
+
+        // console.log(y); // error
+        // console.log(z); // error
+
+    </script>
+
+</body>
+</html>

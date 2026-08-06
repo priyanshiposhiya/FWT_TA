@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Dice</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+        =========================================
+              Random Dice using Math.random()
+        =========================================
+        
+        1. Math.random() generates a random decimal number
+           between 0 (inclusive) and 1 (exclusive).
+        
+        2. Multiplying by 6 gives a number between
+           0 and 5.999...
+        
+        3. Math.floor() removes the decimal part,
+           giving values from 0 to 5.
+        
+        4. Adding 1 changes the range to 1–6,
+           which matches a dice.
+        */
+
+        // Take input from user
+        let n = Number(prompt("Enter number of dice rolls:"));
+
+        // Generate dice numbers
+        for (let i = 1; i <= n; i++) {
+
+            let dice = Math.floor(Math.random() * 6) + 1;
+
+            document.write("Roll " + i + " = " + dice + "<br>");
+        }
+
+    </script>
+
+</body>
+
+</html>

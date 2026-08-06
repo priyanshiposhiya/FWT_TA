@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Select Roll Numbers</h2>
+
+    <!-- Checkboxes -->
+    <input type="checkbox" id="c1" value="101" onchange="showData()">
+    Roll No 101
+
+    <br><br>
+
+    <input type="checkbox" id="c2" value="102" onchange="showData()">
+    Roll No 102
+
+    <br><br>
+
+    <input type="checkbox" id="c3" value="103" onchange="showData()">
+    Roll No 103
+
+    <br><br>
+
+    <input type="checkbox" id="c4" value="104" onchange="showData()">
+    Roll No 104
+
+    <!-- Output -->
+    <div id="result">
+        Selected Roll Numbers:
+    </div>
+
+    <script>
+
+        // function showData() {
+
+        //     let data = "";
+
+        //     // Checkbox 1
+        //     if (document.getElementById("c1").checked) {
+        //         data += document.getElementById("c1").value + ", ";
+        //     }
+
+        //     // Checkbox 2
+        //     if (document.getElementById("c2").checked) {
+        //         data += document.getElementById("c2").value + ", ";
+        //     }
+
+        //     // Checkbox 3
+        //     if (document.getElementById("c3").checked) {
+        //         data += document.getElementById("c3").value + ", ";
+        //     }
+
+        //     // Checkbox 4
+        //     if (document.getElementById("c4").checked) {
+        //         data += document.getElementById("c4").value;
+        //     }
+
+        //     // Display Output
+        //     document.getElementById("result").innerHTML =
+        //         "Selected Roll Numbers: " + data;
+
+        // }
+
+        function showData() {
+
+            checkboxes = document.getElementsByTagName("input");
+            arr = [];
+
+            for (i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].type == "checkbox" && checkboxes[i].checked) {
+                    arr.push(checkboxes[i].value);
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                "Selected Roll Numbers: " + arr.join(", ");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Demo</title>
+
+    <style>
+
+        #box{
+            width:300px;
+            height:200px;
+            background-color:lightblue;
+            margin:auto;
+            text-align:center;
+            line-height:200px;
+            font-size:25px;
+            border:2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2 align="center">Mouse Event Example</h2>
+
+    <div id="box">
+        Click Here
+    </div>
+
+    <h2 id="result" align="center"></h2>
+
+    <script>
+
+        let box = document.getElementById("box");
+
+        // Left Click
+        box.addEventListener("click", function(){
+
+            document.getElementById("result").innerHTML =
+                "Left Clicked";
+        });
+
+        // Right Click
+        box.addEventListener("contextmenu", function(event){
+
+            event.preventDefault();
+
+            document.getElementById("result").innerHTML =
+                "Right Clicked";
+        });
+
+    </script>
+
+</body>
+</html>

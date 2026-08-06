@@ -1,0 +1,89 @@
+    <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Events</title>
+
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+        }
+
+        input{
+            padding: 10px;
+            width: 300px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="result">Press Any Key</h2>
+
+    <input type="text"
+        onkeydown="show('Key Down Event Fired')"
+        onkeypress="show('Key Press Event Fired')"
+        onkeyup="show('Key Up Event Fired')"
+        placeholder="Type Here">
+
+    <script>
+
+        function show(message){
+            document.getElementById("result").innerHTML = message;
+        }
+
+    </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Events using addEventListener</title>
+
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+        }
+
+        input{
+            padding: 10px;
+            width: 300px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="result">Press Any Key</h2>
+
+    <input type="text" id="textbox" placeholder="Type Here">
+
+    <script>
+
+        let inputBox = document.getElementById("textbox");
+
+        inputBox.addEventListener("keydown", function () {
+            show("Key Down Event Fired");
+        });
+
+        inputBox.addEventListener("keypress", function () {
+            show("Key Press Event Fired");
+        });
+
+        inputBox.addEventListener("keyup", function () {
+            show("Key Up Event Fired");
+        });
+
+        function show(message){
+            document.getElementById("result").innerHTML = message;
+        }
+
+    </script>
+
+</body>
+</html>

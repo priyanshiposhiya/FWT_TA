@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Change Properties</title>
+
+    <style>
+
+        #text{
+            color: black;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            display: block;
+            margin: 20px auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 id="text">Hello Students</h1>
+
+    <button onclick="changeProperties()">Change Properties</button>
+
+    <script>
+
+        function changeProperties(){
+
+            let element = document.getElementById("text");
+
+            element.style.color = "blue";
+            element.style.fontSize = "40px";
+            element.style.backgroundColor = "yellow";
+            element.innerHTML = "Properties Changed";
+
+        }
+
+    </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Properties using addEventListener</title>
+
+    <style>
+        #text {
+            color: black;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="text">Hello Students</h1>
+
+    <button id="btn">Change Properties</button>
+
+    <script>
+
+        let button = document.getElementById("btn").addEventListener("click", function () {
+
+            let element = document.getElementById("text");
+
+            element.style.color = "blue";
+            element.style.fontSize = "40px";
+            element.style.backgroundColor = "yellow";
+            element.innerHTML = "Properties Changed";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

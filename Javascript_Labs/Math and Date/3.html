@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Math Methods</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+        =========================================
+         Floor, Ceiling, Round and Truncate
+        =========================================
+        
+        Theory:
+        
+        1. Math.floor()
+           - Returns the largest integer less than or equal to
+             the given number.
+           - It always rounds DOWN.
+        
+        2. Math.ceil()
+           - Returns the smallest integer greater than or equal to
+             the given number.
+           - It always rounds UP.
+        
+        3. Math.round()
+           - Rounds the number to the nearest integer.
+           - If decimal part is 0.5 or more, it rounds up.
+           - Otherwise, it rounds down.
+        
+        4. Math.trunc()
+           - Removes the decimal part of a number.
+           - It does NOT round the number.
+        */
+
+        // Take input from user
+        let num = parseInt(prompt("Enter a decimal number:"));
+
+        // Display output
+        document.write("Entered Number = " + num + "<br><br>");
+
+        document.write("Floor Value = " + Math.floor(num) + "<br>");
+        document.write("Ceiling Value = " + Math.ceil(num) + "<br>");
+        document.write("Rounded Value = " + Math.round(num) + "<br>");
+        document.write("Truncate Value = " + Math.trunc(num));
+
+    </script>
+
+</body>
+
+</html>

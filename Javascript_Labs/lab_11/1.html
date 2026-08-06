@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Example</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Class Demo</h2>
+
+    <script>
+
+        // Create Class
+        class Student {
+
+            // Constructor
+            constructor(name, age, branch) {
+                this.name = name;
+                this.age = age;
+                this.branch = branch;
+            }
+
+            // Method
+            display() {
+                return "Name: " + this.name +
+                    "<br>Age: " + this.age +
+                    "<br>Branch: " + this.branch;
+            }
+        }
+
+        // Create Object
+        const s1 = new Student("Priyanshi", 19, "CSE");
+
+        // Access Method
+        document.write(s1.display());
+
+    </script>
+
+</body>
+
+</html>

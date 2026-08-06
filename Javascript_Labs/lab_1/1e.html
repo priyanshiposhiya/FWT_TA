@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Animation</title>
+<style>
+
+div{
+    width:100px;
+    height:100px;
+    background:red;
+    position:relative;
+
+    animation-name:movebox;
+    animation-duration:5s;
+
+    animation-direction:reverse;
+}
+
+@keyframes movebox{
+
+    from{
+        left:0px;
+    }
+
+    to{
+        left:300px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div></div>
+
+</body>
+</html>

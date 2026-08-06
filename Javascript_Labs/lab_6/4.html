@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <title>Products Array Demo</title>
+</head>
+
+<body>
+
+    <script>
+
+        products = ["Laptop", "Mobile", "Keyboard", "Mouse", "Printer"];
+
+        document.write("<h2>Product List</h2>");
+
+        for (i = 0; i < products.length; i++) {
+            document.write((i + 1) + ". " + products[i] + "<br>");
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Array Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <style>
+        .card {
+            height: 600px;
+            width: 300px;
+        }
+
+        img {
+            height: 300px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        products = [
+            {
+                image:
+                    "https://thehouseofrare.com/cdn/shop/files/BHASIPOWDERBLUE02310.webp?v=1736504317",
+                name: "T-shirt",
+                price: 1000,
+                color: "White",
+                instock: "Yes",
+                description:
+                    "Soft and Breathable Cotton Blend",
+            },
+            {
+                image:
+                    "https://offduty.in/cdn/shop/files/74736F0A-C5AA-4B15-A9FA-7614701D21D3_1080x.jpg?v=1744289216",
+                name: "Jeans",
+                price: 2000,
+                color: "Blue",
+                instock: "No",
+                description:
+                    " Constructed with a durable cotton lycra blend",
+            },
+            {
+                image:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGLk_qO9NS6C3RsXy8lbpC1Y2tzk-L9BOYpA&s",
+                name: "Kurti",
+                price: 3000,
+                color: "Pink-White",
+                instock: "Yes",
+                description: "Rayon with three quarter sleeve and round neck",
+            },
+            {
+                image:
+                    "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/2024/SEPTEMBER/21/saUQXclj_a279be8e0d414bb984f41a01f3861d8e.jpg",
+                name: "Saree",
+                price: 2000,
+                color: "Black-White",
+                instock: "Yes",
+                description:
+                    "White and black saree Batik printed saree with solid border",
+            },
+        ];
+        document.write("<div class='container mt-5'>");
+        document.write("<div class='row'>");
+        for (i = 0; i < products.length; i++) {
+            document.write("<div class='col-md-3'>")
+            document.write("<div class='card mb-4 shadow-sm'>")
+            document.write("<img src=" + products[i].image + " class='card-img-top' alt=" + products[i].name + ">")
+            document.write("<div class='card-body'>")
+            document.write("<h5 class='card-title'>" + products[i].name + "</h5>")
+            document.write("<p class='card-text'>Price : " + products[i].price + "</p>")
+            document.write("<p class='card-text'>Color : " + products[i].color + "</p>")
+            document.write("<p class='card-text'>Instock : " + products[i].instock + "</p>")
+            document.write("<p class='card-text'>Description : " + products[i].description + "</p>")
+            document.write("<a href='#' class='btn btn-primary'>Buy now</a>")
+            document.write("</div>")
+            document.write("</div>")
+            document.write("</div>")
+        }
+        document.write("</div>");
+        document.write("</div>");
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html> -->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date Object</title>
+</head>
+
+<body>
+
+    <script>
+
+        let today = new Date();
+
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        document.write("Current Date : " + today + "<br><br>");
+        document.write("Time : " + today.toLocaleTimeString() + "<br>");
+        document.write("Day : " + days[today.getDay()] + "<br>");
+        document.write("Month : " + months[today.getMonth()] + "<br>");
+        document.write("Year : " + today.getFullYear());
+
+    </script>
+
+</body>
+
+</html>

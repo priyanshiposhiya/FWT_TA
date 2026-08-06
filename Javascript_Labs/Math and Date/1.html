@@ -1,0 +1,108 @@
+<!-- /*
+==========================
+Math Object
+==========================
+
+Definition:
+The Math object is a built-in JavaScript object that provides
+mathematical constants and methods for performing mathematical
+calculations. It does not need to be created using the new keyword.
+
+Syntax:
+Math.methodName(parameters)
+
+Common Methods:
+
+1. Math.max(a, b, ...)
+- Returns the largest value.
+Example:
+Math.max(10, 20, 30) → 30
+
+2. Math.min(a, b, ...)
+- Returns the smallest value.
+Example:
+Math.min(10, 20, 30) → 10
+
+3. Math.abs(x)
+- Returns the absolute (positive) value of a number.
+Example:
+Math.abs(-25) → 25
+
+4. Math.random()
+- Generates a random decimal number between 0 and 1.
+Example:
+Math.random() → 0.7356
+
+5. Math.floor(x)
+- Returns the largest integer less than or equal to x.
+Example:
+Math.floor(7.9) → 7
+
+6. Math.ceil(x)
+- Returns the smallest integer greater than or equal to x.
+Example:
+Math.ceil(7.1) → 8
+
+7. Math.round(x)
+- Rounds a number to the nearest integer.
+Example:
+Math.round(7.6) → 8
+Math.round(7.4) → 7
+
+8. Math.trunc(x)
+- Removes the decimal part of a number.
+Example:
+Math.trunc(7.9) → 7
+
+9. Math.pow(a, b)
+- Returns a raised to the power b.
+Example:
+Math.pow(2, 3) → 8
+
+10. Math.sqrt(x)
+- Returns the square root of a number.
+Example:
+Math.sqrt(64) → 8
+
+Important Points:
+✔ Math is a built-in object.
+✔ No need to create an object using new Math().
+✔ Used for mathematical calculations.
+✔ All methods are accessed using the dot (.) operator.
+*/ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Math Object</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Take input from user
+        let a = parseInt(prompt("Enter first number:"));
+        let b = parseInt(prompt("Enter second number:"));
+        let c = parseInt(prompt("Enter third number:"));
+
+        // Display entered numbers
+        document.write("First Number = " + a + "<br>");
+        document.write("Second Number = " + b + "<br>");
+        document.write("Third Number = " + c + "<br><br>");
+
+        // Find maximum value
+        document.write("Maximum = " + Math.max(a, b, c) + "<br>");
+
+        // Find minimum value
+        document.write("Minimum = " + Math.min(a, b, c) + "<br>");
+
+        // Find absolute value of first number
+        document.write("Absolute Value of First Number = " + Math.abs(a));
+
+    </script>
+
+</body>
+
+</html>

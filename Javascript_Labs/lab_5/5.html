@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Word Index</title>
+</head>
+
+<body>
+    <script>
+        str = prompt("Enter the string : ");
+
+        spt = str.split(" ");
+
+        word = prompt("Enter the word : ");
+
+        // document.write(spt.indexOf(word));
+
+        for (i = 0; i < spt.length; i++) {
+            if (spt[i] == word) {
+                document.write("Index of the word is : " + i);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

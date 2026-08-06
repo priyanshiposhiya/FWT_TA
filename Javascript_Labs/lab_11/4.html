@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Demo</title>
+  </head>
+  <body>
+    <script>
+      student1 = {
+        name: "Priyanshi",
+        age: 19,
+        sem: 3,
+        branch: "CSE",
+        enrollmentNo: 24010101223,
+        collage: "Darshan University",
+      };
+
+      // let { name, age, sem } = student1;
+      // console.log("Student Name: " + name);
+      // console.log("Age: " + age);
+      // console.log("Semester: " + sem);
+      // console.log(branch)
+
+        let { name, age, sem ,...otherObjects} = student1
+        console.log("Student Name: " + name)
+        console.log("Age: " + age)
+        console.log("Semester: " + sem)
+        console.log(otherObjects)
+        console.log("Other Objects: " + JSON.stringify(otherObjects))
+
+
+      // arr1 = [1, 2, 3, 4, 5];
+      // let [a, b, c] = arr1;
+      // console.log("First element: " + a);
+      // console.log("Second element: " + b);
+      // console.log("Third element: " + c);
+
+        arr1 = [1, 2, 3, 4, 5];
+        let[a,,c,...otherElements]=arr1
+        console.log("First element: " + a)
+        console.log("Third element: " + c)
+        console.log("Other elements: " + otherElements)
+    </script>
+  </body>
+</html>

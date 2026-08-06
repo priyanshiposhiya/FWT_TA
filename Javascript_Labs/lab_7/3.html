@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        table{
+            height: 400px;
+            width: 300px;
+            background-color: black;
+        }
+        button{
+            height: 60px;
+            width: 73px;
+            font-size: x-large;
+            background-color: black;
+            color: white;
+        }
+        input{
+            height: 80px;
+            width: 375px;
+            background-color: azure;
+            font-size: x-large;
+        }
+        .clear{
+            background-color:lightcoral;
+        }
+    
+    </style>
+</head>
+<body>
+    <table border="1" align="center" ce;;spacing="0">
+        <tr>
+            <td colspan="5">
+                <input type="text" id="mytext">
+            </td>
+        </tr>
+        <tr>
+            <td><button class="clear" onclick="clearAll()">AC</button></td>
+            <td><button onclick="getNumber('(')">(</button></td>
+            <td><button onclick="getNumber(')')">)</button></td>
+            <td><button onclick="getNumber('**')">x^y</button></td>
+            <td><button onclick="deleteLast()">⌫</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="getNumber('7')">7</button></td>
+            <td><button onclick="getNumber('8')">8</button></td>
+            <td><button onclick="getNumber('9')">9</button></td>
+            <td><button onclick="getNumber('Math.sqrt(')">√</button></td>
+            <td><button onclick="getNumber('/')">÷</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="getNumber('4')">4</button></td>
+            <td><button onclick="getNumber('5')">5</button></td>
+            <td><button onclick="getNumber('6')">6</button></td>
+            <td><button onclick="getNumber('Math.log10(')">log</button></td>
+            <td><button onclick="getNumber('*')">x</button></td>
+            
+        </tr>
+        <tr>
+            <td><button onclick="getNumber('1')">1</button></td>
+            <td><button onclick="getNumber('2')">2</button></td>
+            <td><button onclick="getNumber('3')">3</button></td>
+            <td><button onclick="getNumber('Math.log(')">ln</button></td>
+            <td><button onclick="getNumber('-')">-</button></td>
+            
+        </tr>
+        <tr>
+            <td><button onclick="getNumber('0')">0</button></td>
+            <td><button onclick="getNumber('00')">00</button></td>
+            <td><button onclick="getNumber('.')">.</button></td>
+            <td><button onclick="getAnswer()">=</button></td>
+            <td><button onclick="getNumber('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="getNumber('Math.sin(')">sin</button></td>
+            <td><button onclick="getNumber('Math.cos(')">cos</button></td>
+            <td><button onclick="getAnswer('Math.tan(')">tan</button></td>
+            <td><button onclick="getNumber('Math.PI')">π</button></td>
+            <td><button onclick="getNumber('Math.E')">e</button></td>
+        </tr>
+    </table>
+    <script>
+        idRef=document.getElementById("mytext")
+        function getNumber(num){
+            idRef.value += num
+        }
+        function clearAll(){
+            idRef.value =' '
+        }
+        function deleteLast(){
+           idRef.value=idRef.value.slice(0,-1)
+        }
+        function getAnswer(){
+            idRef.value=eval(idRef.value)
+        }
+    </script>
+</body>
+</html>

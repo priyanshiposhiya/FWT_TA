@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Darshan University Clone</title>
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <style>
+
+        body{
+            font-family:Arial, sans-serif;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            background:#0d1b2a;
+        }
+
+        .navbar-brand{
+            color:white !important;
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .nav-link{
+            color:white !important;
+            margin-left:15px;
+        }
+
+        .nav-link:hover{
+            color:#00b4d8 !important;
+        }
+
+        /* Hero Section */
+
+        .hero{
+            height:90vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)),
+
+            url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            text-align:center;
+            color:white;
+        }
+
+        .hero h1{
+            font-size:60px;
+            font-weight:bold;
+        }
+
+        .hero p{
+            font-size:24px;
+            margin-top:20px;
+        }
+
+        .hero button{
+            margin-top:25px;
+            padding:12px 30px;
+            border:none;
+            background:#00b4d8;
+            color:white;
+            font-size:18px;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .hero button:hover{
+            background:#0077b6;
+            transform:scale(1.05);
+        }
+
+        /* Features */
+
+        .feature-card{
+            padding:35px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            transition:0.4s;
+            background:white;
+        }
+
+        .feature-card:hover{
+            transform:translateY(-10px);
+        }
+
+        .feature-card h3{
+            color:#0d1b2a;
+            margin-top:20px;
+        }
+
+        /* About */
+
+        .about{
+            background:#f8f9fa;
+        }
+
+        .about img{
+            width:100%;
+            border-radius:15px;
+        }
+
+        /* Courses */
+
+        .course-card{
+            border:none;
+            border-radius:15px;
+            overflow:hidden;
+            transition:0.4s;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .course-card:hover{
+            transform:scale(1.03);
+        }
+
+        /* Footer */
+
+        footer{
+            background:#0d1b2a;
+            color:white;
+            padding:40px 0;
+            margin-top:50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Darshan University
+            </a>
+
+            <button class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+            id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1>
+                Welcome to Darshan University
+            </h1>
+
+            <p>
+                Explore Innovation, Knowledge & Technology
+            </p>
+
+            <button>
+                Explore More
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Features -->
+
+    <section class="container py-5">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <h3>Modern Campus</h3>
+
+                    <p>
+                        Smart classrooms and advanced laboratories.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <h3>Expert Faculty</h3>
+
+                    <p>
+                        Experienced professors and industry experts.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <h3>Placements</h3>
+
+                    <p>
+                        Excellent placement opportunities for students.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+
+    <section class="about py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop">
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <h2>
+                        About University
+                    </h2>
+
+                    <p class="mt-3">
+
+                        Darshan University provides quality education
+                        with modern infrastructure and industry-ready
+                        skills for students.
+
+                    </p>
+
+                    <button class="btn btn-primary mt-3">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Courses Section -->
+
+    <section class="container py-5">
+
+        <h2 class="text-center mb-5">
+            Popular Courses
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="card course-card">
+
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop"
+                    class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h4>B.Tech CSE</h4>
+
+                        <p>
+                            Computer Science & Engineering program.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card course-card">
+
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"
+                    class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h4>MBA</h4>
+
+                        <p>
+                            Business and management studies program.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card course-card">
+
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+                    class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h4>BCA</h4>
+
+                        <p>
+                            Application and software development studies.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="container text-center">
+
+            <h3>Darshan University</h3>
+
+            <p class="mt-3">
+                Rajkot, Gujarat, India
+            </p>
+
+            <p>
+                © 2026 All Rights Reserved
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

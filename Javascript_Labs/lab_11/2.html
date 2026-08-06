@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread Operator Demo</title>
+  </head>
+  <body>
+    <script>
+      student1 = {
+        name: "Priyanshi",
+        age: 19,
+        seme: 3,
+        branch: "CSE",
+        enrollmentNo: 24010101223,
+        collage: "Darshan University",
+      }
+      student2 = {
+        name: "Pari",
+        age: 19,
+        seme: 3,
+        branch: "BCA",
+        enrollmentNo: 24010101220,
+        collage: "RK University",
+      }
+
+      copyObject = {...student1 }
+      console.log(copyObject)
+
+      mergedObject = {...student1 ,...student2}
+      console.log(mergedObject)
+
+      arr1 = [1, 2, 3, 4, 5]
+
+      copyArr= [...arr1]
+      document.write(copyArr+"</br>")
+
+      arr2=[6,7,8,9,10]
+      mergedArr=[...arr1,arr2]
+      document.write(mergedArr)
+    </script>
+  </body>
+</html>

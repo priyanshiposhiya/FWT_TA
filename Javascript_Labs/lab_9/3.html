@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameters Demo</title>
+</head>
+<body>
+    <script>
+        function abc1(a,b){
+            console.log(a)
+            console.log(b)
+        }
+        abc1(5,3)
+
+        function abc2(a=6,b){
+            console.log(a)
+            console.log(b)
+        }
+        abc2(5,3)
+
+        function abc3(a=6,b){
+            console.log(a)
+            console.log(b)
+        }
+        abc3(5)
+
+        function abc4(a,b=6){
+            console.log(a)
+            console.log(b)
+        }
+        abc4(5)
+    </script>
+</body>
+</html>

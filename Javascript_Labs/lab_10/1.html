@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Demo</title>
+</head>
+
+<body>
+    <script>
+        // Normal Function
+        function greet() {
+            console.log("Hello");
+        }
+
+        greet();
+
+        // Arrow Function
+        const greet = () => {
+            console.log("Hello");
+        };
+
+        greet();
+
+        // Arrow Function with no parameter
+        const show = () => {
+            console.log("No Parameters");
+        };
+
+        show();
+
+        // Arrow Function with one parameter
+        // No need to use parentheses for single parameter
+
+        const square = n => {
+            return n * n;
+        };
+
+        console.log(square(5));
+
+        // Arrow function with multiple parameters
+        const add = (a, b) => {
+            return a + b;
+        };
+
+        console.log(add(10, 20));
+
+        // Arrow function with return statement
+        const multiply = (a, b) => {
+            return a * b;
+        };
+
+        console.log(multiply(4, 5));
+
+        // Arrow function with implicit return
+        // If the function body contains only a single expression, we can omit the curly braces and the return keyword
+
+        const sum = (a, b) => a + b;
+
+        console.log(sum(5, 7));
+
+        // Arrow function with no parameters and implicit return
+        const getPi = () => 3.14;
+
+        // Arrow function with multiple expression
+        const calculate = (a, b) => {
+            const sum = a + b;
+            const product = a * b;
+            return `Sum: ${sum}, Product: ${product}`;
+        };
+
+        console.log(calculate(5, 7));
+
+    </script>
+
+</body>
+
+</html>

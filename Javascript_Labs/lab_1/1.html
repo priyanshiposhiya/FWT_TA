@@ -1,0 +1,190 @@
+<!-- Write HTML, CSS3 code for following animation effects (A)
+a.	changing background color of div from red to yellow.
+b.	moving div from Left to right, right to bottom, bottom to left and left to top.
+c.	put delay of 2s in animation.
+d.	Change animation-iteration count property of program 2 to run infinite times
+e.	Change animation direction property to run it in reverse order.
+f.	Change value of animation-timing-function property to change the speed of animation -->
+
+<!-- // Animation is a powerful feature in CSS3 that allows you to create dynamic and engaging web content. 
+// syntax for animation:
+// animation: animationName duration timing-function delay iteration-count direction fill-mode play-state;
+// for begginners, we will focus on the following properties:
+// 1. animation-name: Specifies the name of the @keyframes animation to apply.
+// 2. animation-duration: Specifies the duration of the animation (e.g., 2s for 2 seconds).
+// 3. animation-timing-function: Specifies the speed curve of the animation (e.g., ease, linear, ease-in, ease-out, ease-in-out).
+// 4. animation-delay: Specifies a delay before the animation starts (e.g., 2s for a 2-second delay).
+// 5. animation-iteration-count: Specifies how many times the animation should repeat (e.g., infinite for infinite repetitions).
+// 6. animation-direction: Specifies whether the animation should play in reverse on alternate cycles (e.g., normal, reverse, alternate, alternate-reverse).         -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS3 Animation Effects</title>
+
+    <style>
+        /* (a) Background Color Change */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: colorChange 4s infinite;
+        }
+
+        @keyframes colorChange {
+            from {
+                background: red;
+            }
+
+            to {
+                background: yellow;
+            }
+        }
+
+        /* (b) Move Left → Right → Bottom → Left → Top */
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            animation: moveBox 8s;
+        }
+
+        @keyframes moveBox {
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                left: 300px;
+                top: 0;
+            }
+
+            50% {
+                left: 300px;
+                top: 300px;
+            }
+
+            75% {
+                left: 0;
+                top: 300px;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+
+        /* (c) Animation Delay of 2s */
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background: green;
+            position: relative;
+            animation: delayAnim 5s;
+            animation-delay: 2s;
+            margin-bottom: 30px;
+        }
+
+        @keyframes delayAnim {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 300px;
+            }
+        }
+
+        /* (d) Infinite Iteration Count */
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            position: relative;
+            /* animation : animationName duration iteration-count */
+            animation: infiniteAnim 3s infinite;
+        }
+
+        @keyframes infiniteAnim {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 300px;
+            }
+        }
+
+        /* (e) Reverse Direction */
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background: purple;
+            position: relative;
+            animation: reverseAnim 3s reverse;
+        }
+
+        @keyframes reverseAnim {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 300px;
+            }
+        }
+
+        /* (f) Timing Function */
+        .box6 {
+            width: 100px;
+            height: 100px;
+            background: brown;
+            position: relative;
+            animation: timingAnim 4s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes timingAnim {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 400px;
+            }
+        }
+
+        div {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>(a) Background Color Change</h3>
+    <div class="box1"></div>
+
+    <h3>(b) Move Left → Right → Bottom → Left → Top</h3>
+    <div class="box2"></div>
+
+    <h3>(c) Animation Delay (2s)</h3>
+    <div class="box3"></div>
+
+    <h3>(d) Infinite Iteration Count</h3>
+    <div class="box4"></div>
+
+    <h3>(e) Reverse Direction</h3>
+    <div class="box5"></div>
+
+    <h3>(f) Timing Function (ease-in-out)</h3>
+    <div class="box6"></div>
+
+</body>
+
+</html>

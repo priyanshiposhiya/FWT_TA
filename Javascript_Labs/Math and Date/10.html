@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password</title>
+</head>
+
+<body>
+
+    <script>
+
+        let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        let len = parseInt(prompt("Enter Length"));
+
+        let pass = "";
+
+        for (let i = 0; i < len; i++) {
+            let index = Math.floor(Math.random() * chars.length);
+            pass += chars[index];
+        }
+
+        document.write("Password : "+pass);
+
+    </script>
+
+</body>
+
+</html>

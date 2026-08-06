@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date Difference</title>
+</head>
+
+<body>
+
+    <script>
+
+        let start = new Date(prompt("Enter Start Date (YYYY-MM-DD)"));
+        let end = new Date(prompt("Enter End Date (YYYY-MM-DD)"));
+
+        let total = 0;
+        let weekend = 0;
+        let working = 0;
+
+        while (start <= end) {
+            total++;
+
+            if (start.getDay() == 0 || start.getDay() == 6)
+                weekend++;
+            else
+                working++;
+
+            start.setDate(start.getDate() + 1);
+        }
+
+        document.write("Total Days = " + total + "<br>");
+        document.write("Weekends = " + weekend + "<br>");
+        document.write("Working Days = " + working);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Year Countdown</title>
+</head>
+<body>
+
+<h2>New Year Countdown</h2>
+
+<h1 id="countdown"></h1>
+
+<script>
+    // Set next New Year date
+    let newYear = new Date("January 1, 2027 00:00:00");
+     console.log(newYear);
+    setInterval(function () {
+
+        let now = new Date();
+
+        let diff = newYear - now;
+
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        let minutes = Math.floor((diff / (1000 * 60)) % 60);
+        let seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("countdown").innerHTML =
+            days + " Days " +
+            hours + " Hours " +
+            minutes + " Minutes " +
+            seconds + " Seconds";
+         console.log(now);
+         console.log(diff);
+    }, 1000);
+
+       
+       
+
+        
+
+</script>
+
+</body>
+</html>

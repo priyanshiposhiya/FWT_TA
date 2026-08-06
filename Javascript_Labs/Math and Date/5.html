@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Age Calculator</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+        =========================================
+              Age Calculator using Date Object
+        =========================================
+        
+        Theory:
+        1. The Date object is used to work with dates and times.
+        2. The user's Date of Birth is taken using prompt().
+        3. new Date() converts the entered date into a Date object.
+        4. getFullYear() returns the current year.
+        5. getMonth() returns the month (0–11).
+        6. getDate() returns the day of the month (1–31).
+        7. Age = Current Year − Birth Year.
+        8. If the birthday has not occurred this year,
+           subtract 1 from the calculated age.
+        */
+
+        // Take Date of Birth from the user
+        let dob = new Date(prompt("Enter Date of Birth (YYYY-MM-DD):"));
+
+        // Get current date
+        let today = new Date();
+
+        // Calculate age
+        let age = today.getFullYear() - dob.getFullYear();
+
+        // Check if birthday has occurred this year
+        if (
+            today.getMonth() < dob.getMonth() ||
+            (today.getMonth() == dob.getMonth() &&
+                today.getDate() < dob.getDate())
+        ) {
+            age--;
+        }
+
+        // Display output
+        document.write("Date of Birth = " + dob.toDateString() + "<br>");
+        document.write("Current Date = " + today.toDateString() + "<br>");
+        document.write("Age = " + age + " Years");
+
+    </script>
+
+</body>
+
+</html>

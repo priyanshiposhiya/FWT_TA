@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Background Color</title>
+    <style>
+      .box {
+        height: 500px;
+        width: 500px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box" onclick="changeBackgroud()"></div>
+    <script>
+      function changeBackgroud() {
+        r = parseInt(Math.random() * 255);
+        g = parseInt(Math.random() * 255);
+        b = parseInt(Math.random() * 255);
+        divRef = document.getElementById("box");
+        // divRef.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        divRef.style.backgroundColor = "blue";
+        
+      }
+    </script>
+  </body>
+</html>
